@@ -1,0 +1,65 @@
+[user]
+  name = Eric Hankinson
+  email = eric.hankinson+github@gmail.com
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+  diffFilter = diff-so-fancy --patch
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[init]
+  defaultBranch = master
+[gc]
+  auto = 1
+[web]
+  browser = google-chrome
+[credential]
+  helper = osxkeychain
+[log]
+  decorate = auto
+[merge]
+  summary = true
+[push]
+  default = matching
+[alias]
+  ar = add -A
+  b = branch -v
+  br = branch
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -am
+  co = checkout
+  cp = cherry-pick -x
+  d = diff
+  dc = diff --cached
+  l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+  put = push origin HEAD
+  r = remote -v
+  rb = rebase
+  s = status
+  t = tag -l
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+  recommit = commit -C head --amend
+[pull]
+	rebase = true

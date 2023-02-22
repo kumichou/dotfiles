@@ -170,8 +170,8 @@ chflags nohidden ~/Library
 # Terminal                                                                    #
 ##############################################################################
 
-# Change MacOS from ZSH to BASH (because at one time, I was a BASH Wizard)
-chsh -s /bin/bash
+# Change MacOS from ZSH to Homebrew's installed BASH (because at one time, I was a BASH Wizard)
+chsh -s `brew --prefix`/bin/bash $(whoami)
 
 
 ###############################################################################

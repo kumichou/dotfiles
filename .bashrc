@@ -1,6 +1,7 @@
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/aclocal:$PATH
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   source `brew --prefix`/etc/bash_completion
@@ -30,4 +31,15 @@ export PIPENV_VENV_IN_PROJECT=1
 if [ -f ~/bash-sensible/sensible.bash ]; then
   source ~/bash-sensible/sensible.bash
 fi
+
+if [ -d ~/.profile_d ]; then
+  for PROFILE_SCRIPT in $HOME/.profile_d/*.sh; do
+    source "$PROFILE_SCRIPT"
+  done
+fi
+
+if [ -f ~/ps1_functions ]; then
+  source ~/ps1_functions
+fi
+
 

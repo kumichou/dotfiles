@@ -3,6 +3,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/aclocal:$PATH
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   source `brew --prefix`/etc/bash_completion
 fi

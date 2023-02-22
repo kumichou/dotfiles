@@ -45,3 +45,6 @@ if [ -f ~/ps1_functions ]; then
 fi
 
 
+ps1_update
+function cd() { builtin cd "$@" && ps1_update; }
+

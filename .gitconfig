@@ -57,6 +57,7 @@
   r = remote -v
   rb = rebase
   s = status
+  st = status
   t = tag -l
   unstage = reset HEAD
   uncommit = reset --soft HEAD^

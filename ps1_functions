@@ -140,9 +140,4 @@ ps4_set()
 # it now uses the PROMPT_COMMAND callback to re-set the PS1 with a known width of chracters
 # each time a new command is entered. See PROMPT_COMMAND for more details.
 #
-ps1_set()
-{
-  PS="ps1_update $@"
-}
 
-ps1_set --prompt $

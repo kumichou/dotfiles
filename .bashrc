@@ -44,6 +44,9 @@ if [ -f ~/ps1_functions ]; then
   source ~/ps1_functions
 fi
 
+if [ -f `brew --prefix`/bin/rtx ]; then
+  eval "$(`brew --prefix`/bin/rtx activate bash)"
+fi
 
 ps1_update
 function cd() { builtin cd "$@" && ps1_update; }

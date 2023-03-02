@@ -1,4 +1,5 @@
 
+export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/aclocal:$PATH
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"

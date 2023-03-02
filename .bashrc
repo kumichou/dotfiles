@@ -5,9 +5,11 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  source `brew --prefix`/etc/bash_completion
-fi
+#if [ -f `brew --prefix`/etc/bash_completion ]; then
+#  source `brew --prefix`/etc/bash_completion
+#fi
+
+[[ -r "`brew --prefix`/etc/profile.d/bash_completion.sh" ]] && . "`brew --prefix`/etc/profile.d/bash_completion.sh"
 
 alias brewski='brew update && brew upgrade; brew cleanup; brew doctor'
 alias purge_all_xcode_builds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
